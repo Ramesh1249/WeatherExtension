@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="weather.css">
+        <!--<script src="http://yui.yahooapis.com/3.13.0/build/yui/yui-min.js"></script>-->
+
+    </head>
+    <body class="mainbody" >
+        
+        <div id="weatherbody" class="weather-body">
+        <div id="wallpaper" class="wallpaper_back">
+            <div id="locationsearch" class="location-search"  style="
+    padding-top: 17px ; padding-left: 14px;">
+                <span id="searchbox">
+                    <input type="text" value="" class="locatsearch" id="locsearch" readonly>
+
+                </span>
+             </div>
+              <div id="locationid" class="location-id"></div><div id="txt"></div>
+              <div id="reclocations" class="rec-locations">
+                <button id="recentloc" class="recloc">Locations</button>
+                
+              </div>
+                <div id="locationlist" class="location-list">
+                    <div id="addloclist" class="add-loc-list">
+                        <span id="close" class="closeadd" onclick="locout(event)">x</span>
+                        <button id="addloc" class="add-loc"><b> ADD LOCATIONS</b></button>
+                        <div id="add1" class="add-1">
+                        <input id="addlocsearch" class="add-locsearch" type="text" value="search" onclick="this.select()"></input>
+                        <button id="add" class="ad-ser" onclick="add(event)"><b>+</b></button></div>
+                    </div>
+            <ul id="listofloc" class="list-of-loc">   
+            <li class="listitems" id="dummylist"></li>
+            </ul>
+            </div>        
+            <div id="errorloc" class="error-search"><label id="texterr">No weather data for this location</label></div>
+        
+            </div>
+           
+        <div id="weatherlist" class="weather-list">
+            <div id="present" class="weather-content"></div>
+            <div id="dayscon" class="days_con">
+                <div id="day1" class="day"></div>
+                <div id="day2" class="day"></div>
+                <div id="day3" class="day"></div>
+                <div id="day4" class="day"></div>
+                <div id="day5" class="day"></div>
+            </div>    
+        </div> 
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="yui-debug.js"></script>
+        
+    </body>
+</html>

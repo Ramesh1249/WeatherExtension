@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Weather",
+  "description": "This extension demonstrates a 'browser action' with Weather.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon":"icon.png",
+    "default_popup": "popup.html"
+    
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["weather.css"],
+      "js": ["script.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+     "http://*.google.com/"
+]
+  
+} 
